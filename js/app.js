@@ -9,7 +9,7 @@ angular
 		self.result = '';
 
 		// on change of param - send service request
-		self.paramChange = function() {
+		self.paramChange = function() {			
 			if (self.param.length > 0) {
 				Generator.request(self.action, self.param).then(function(response) {
 					var apiData = response.data;
@@ -17,7 +17,7 @@ angular
 				});
 			}
 			else {
-				self.result = '';
+				self.result = ''; // clear result p tag
 			}
 		}
 	}])

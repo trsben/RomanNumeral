@@ -14,7 +14,7 @@
 <body>
 	<div class="container" ng-controller="Conversion as Con">
 		<input type="text" ng-model="Con.param" ng-change="Con.paramChange()" />
-		<select ng-model="Con.action">
+		<select ng-model="Con.action" ng-change="Con.paramChange()">
 			<option value="generate" selected="selected">Generate</option>
 			<option value="parse">Parse</option>
 		</select>
