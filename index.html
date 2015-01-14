@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" ng-app="RomanNumeral">
+<head>
+	<title>Roman Numeral Conversion</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="container" ng-controller="Conversion as Con">
+		<input type="text" ng-model="Con.param" ng-change="Con.paramChange()" />
+		<select ng-model="Con.action">
+			<option value="generate" selected="selected">Generate</option>
+			<option value="parse">Parse</option>
+		</select>
+
+		<p>{{Con.result}}</p>
+	</div>
+
+	<script src="js/vendor/modernizr.js"></script>
+	<script src="js/vendor/angular.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

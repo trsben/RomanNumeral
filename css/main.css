@@ -1,0 +1,25 @@
+.container {
+	width: 350px;
+	margin: 45px auto 0;
+}
+
+.container input {
+	width: 200px;
+	height: 25px;
+	line-height: 35px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	float: left;
+	margin: 0 0 10px;
+}
+
+.container select {
+	margin: 8px 0;
+	width: 120px;
+	float: right;
+}
+
+.container p {
+	text-align: center;
+	clear: both;
+}
