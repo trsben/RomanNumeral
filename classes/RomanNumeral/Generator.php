@@ -55,6 +55,11 @@ class RomanNumeral_Generator implements RomanNumeral_GeneratorInterface {
 		$result = 0;
 		$paramRomanNumeral = strtoupper($paramRomanNumeral);
 
+		// check param contains only roman numerals
+		if (!preg_match('/[CDMILVX]/', $paramRomanNumeral)) {
+			throw new \InvalidArgumentException('Expected roman numeral, contains invalid characters');
+		}
+
 		/*
 		 * Search for first roman numeral in string and add numeral equivalent 
 		 * to end result
