@@ -36,10 +36,10 @@ class RomanNumeral_Generator implements RomanNumeral_GeneratorInterface {
 			foreach ($this->conversionArray as $romanNumeral => $integer) {
 				if ($paramInteger >= $integer) {
 					$paramInteger -= $integer;
-	        		$result .= $romanNumeral;
+					$result .= $romanNumeral;
 
-	        		break; // restart from the top of conversion array
-	        	}
+					break; // restart from the top of conversion array
+				}
 			}
 		}
 
@@ -54,17 +54,17 @@ class RomanNumeral_Generator implements RomanNumeral_GeneratorInterface {
 
 		$result = 0;
 		$paramRomanNumeral = strtoupper($paramRomanNumeral);
-        
-        /*
+
+		/*
 		 * Search for first roman numeral in string and add numeral equivalent 
 		 * to end result
 		 */
-        foreach ($this->conversionArray as $romanNumber => $integer) {
-            while (strpos($paramRomanNumeral, $romanNumber) === 0) {
-                $result += $integer;
-                $paramRomanNumeral = substr($paramRomanNumeral, strlen($romanNumber));
-            }
-        }
+		foreach ($this->conversionArray as $romanNumber => $integer) {
+			while (strpos($paramRomanNumeral, $romanNumber) === 0) {
+				$result += $integer;
+				$paramRomanNumeral = substr($paramRomanNumeral, strlen($romanNumber));
+			}
+		}
 
 		return $result;
 	}	
